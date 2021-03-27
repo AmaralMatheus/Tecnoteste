@@ -3,8 +3,8 @@
     <label class="items-center mb-2 flex">
       <div class="flex tracking-wide text-gray-700 text-xs font-bold">{{ label }}<div class="text-xs font-light italic mx-2">{{ hint }}</div></div>
     </label>
-    <input :disabled="disabled" @blur="updateField" :value="value" :class="messages[field] ? 'border-red-500' : ''" v-if="mask" v-mask="mask" class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-1 leading-tight focus:outline-none h-10 focus:bg-white">
-    <input @blur="updateField" :type="type" :value="value" :class="messages[field] ? 'border-red-500' : ''" v-else class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-1 leading-tight focus:outline-none h-10 focus:bg-white">
+    <input :disabled="disabled" @blur="updateField" min="1" :value="value" :class="messages[field] ? 'border-red-500' : ''" v-if="mask" v-mask="mask" class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-1 leading-tight focus:outline-none h-10 focus:bg-white">
+    <input @blur="updateField" :type="type" min="1" :value="value" :class="messages[field] ? 'border-red-500' : ''" v-else class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-1 leading-tight focus:outline-none h-10 focus:bg-white">
     <p class="text-red-500 lg:mb-4 text-xs italic">{{messages[field]}}&nbsp;</p>
   </div>
 </template>
